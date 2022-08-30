@@ -1,0 +1,6 @@
+module Mux(input I0,I1,S, output Y);
+       wire w1,w2;
+       and a1(w1,I0,(~S));
+       and a2(w2,I1,S);
+       or o1(Y,w1,w2);
+         endmodule

@@ -1,0 +1,25 @@
+module bit8_adder(input sub,A7,A6,A5,A4,A3,A2,A1,A0,B7,B6,B5,B4,B3,B2,B1,B0, output S7,S6,S5,S4,S3,S2,S1,S0,cOut);
+  
+    xor x1(w1,0,sub);
+
+    xor x2(w2,B0,sub);
+    xor x3(w3,B1,sub);
+    xor x4(w4,B2,sub);
+    xor x5(w5,B3,sub);
+    xor x6(w6,B4,sub);
+    xor x7(w7,B5,sub);
+    xor x8(w8,B6,sub);
+    xor x9(w9,B7,sub);
+
+    full_adder add1(A0,w2,w1,S0,C0);
+    full_adder add2(A1,w3,C0,S1,C1);
+    full_adder add3(A2,w4,C1,S2,C2);
+    full_adder add4(A3,w5,C2,S3,C3);
+    full_adder add5(A4,w6,C3,S4,C4);
+    full_adder add6(A5,w7,C4,S5,C5);
+    full_adder add7(A6,w8,C5,S6,C6);
+    full_adder add8(A7,w9,C6,S7,C7);
+
+    xor x10(cOut,sub,C7);
+
+endmodule; 

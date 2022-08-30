@@ -1,0 +1,5411 @@
+|DE10_LITE_Golden_Top
+HEX0[0] << calculator:cal.port5
+HEX0[1] << calculator:cal.port5
+HEX0[2] << calculator:cal.port5
+HEX0[3] << calculator:cal.port5
+HEX0[4] << calculator:cal.port5
+HEX0[5] << calculator:cal.port5
+HEX0[6] << calculator:cal.port5
+HEX0[7] << calculator:cal.port5
+HEX1[0] << calculator:cal.port6
+HEX1[1] << calculator:cal.port6
+HEX1[2] << calculator:cal.port6
+HEX1[3] << calculator:cal.port6
+HEX1[4] << calculator:cal.port6
+HEX1[5] << calculator:cal.port6
+HEX1[6] << calculator:cal.port6
+HEX1[7] << calculator:cal.port6
+HEX2[0] << calculator:cal.port7
+HEX2[1] << calculator:cal.port7
+HEX2[2] << calculator:cal.port7
+HEX2[3] << calculator:cal.port7
+HEX2[4] << calculator:cal.port7
+HEX2[5] << calculator:cal.port7
+HEX2[6] << calculator:cal.port7
+HEX2[7] << calculator:cal.port7
+HEX3[0] << calculator:cal.port8
+HEX3[1] << calculator:cal.port8
+HEX3[2] << calculator:cal.port8
+HEX3[3] << calculator:cal.port8
+HEX3[4] << calculator:cal.port8
+HEX3[5] << calculator:cal.port8
+HEX3[6] << calculator:cal.port8
+HEX3[7] << calculator:cal.port8
+HEX4[0] << calculator:cal.port9
+HEX4[1] << calculator:cal.port9
+HEX4[2] << calculator:cal.port9
+HEX4[3] << calculator:cal.port9
+HEX4[4] << calculator:cal.port9
+HEX4[5] << calculator:cal.port9
+HEX4[6] << calculator:cal.port9
+HEX4[7] << calculator:cal.port9
+HEX5[0] << calculator:cal.port10
+HEX5[1] << calculator:cal.port10
+HEX5[2] << calculator:cal.port10
+HEX5[3] << calculator:cal.port10
+HEX5[4] << calculator:cal.port10
+HEX5[5] << calculator:cal.port10
+HEX5[6] << calculator:cal.port10
+HEX5[7] << calculator:cal.port10
+KEY[0] => ~NO_FANOUT~
+KEY[1] => KEY[1].IN1
+LEDR[0] << calculator:cal.port11
+LEDR[1] << calculator:cal.port11
+LEDR[2] << calculator:cal.port11
+LEDR[3] << calculator:cal.port11
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+
+
+|DE10_LITE_Golden_Top|calculator:cal
+sign_input => sign_input.IN1
+number_input => number_input.IN1
+SW[0] => SW[0].IN3
+SW[1] => SW[1].IN3
+SW[2] => SW[2].IN3
+SW[3] => SW[3].IN3
+SW[4] => SW[4].IN2
+SW[5] => SW[5].IN2
+SW[6] => SW[6].IN2
+en => en.IN2
+res => res.IN2
+hex0[0] <= num_decoder:deco6.port4
+hex0[1] <= num_decoder:deco6.port4
+hex0[2] <= num_decoder:deco6.port4
+hex0[3] <= num_decoder:deco6.port4
+hex0[4] <= num_decoder:deco6.port4
+hex0[5] <= num_decoder:deco6.port4
+hex0[6] <= num_decoder:deco6.port4
+hex0[7] <= num_decoder:deco6.port4
+hex1[0] <= num_decoder:deco5.port4
+hex1[1] <= num_decoder:deco5.port4
+hex1[2] <= num_decoder:deco5.port4
+hex1[3] <= num_decoder:deco5.port4
+hex1[4] <= num_decoder:deco5.port4
+hex1[5] <= num_decoder:deco5.port4
+hex1[6] <= num_decoder:deco5.port4
+hex1[7] <= num_decoder:deco5.port4
+hex2[0] <= num_decoder:deco3.port4
+hex2[1] <= num_decoder:deco3.port4
+hex2[2] <= num_decoder:deco3.port4
+hex2[3] <= num_decoder:deco3.port4
+hex2[4] <= num_decoder:deco3.port4
+hex2[5] <= num_decoder:deco3.port4
+hex2[6] <= num_decoder:deco3.port4
+hex2[7] <= num_decoder:deco3.port4
+hex3[0] <= num_decoder:deco4.port4
+hex3[1] <= num_decoder:deco4.port4
+hex3[2] <= num_decoder:deco4.port4
+hex3[3] <= num_decoder:deco4.port4
+hex3[4] <= num_decoder:deco4.port4
+hex3[5] <= num_decoder:deco4.port4
+hex3[6] <= num_decoder:deco4.port4
+hex3[7] <= num_decoder:deco4.port4
+hex4[0] <= num_decoder:deco1.port4
+hex4[1] <= num_decoder:deco1.port4
+hex4[2] <= num_decoder:deco1.port4
+hex4[3] <= num_decoder:deco1.port4
+hex4[4] <= num_decoder:deco1.port4
+hex4[5] <= num_decoder:deco1.port4
+hex4[6] <= num_decoder:deco1.port4
+hex4[7] <= num_decoder:deco1.port4
+hex5[0] <= num_decoder:deco2.port4
+hex5[1] <= num_decoder:deco2.port4
+hex5[2] <= num_decoder:deco2.port4
+hex5[3] <= num_decoder:deco2.port4
+hex5[4] <= num_decoder:deco2.port4
+hex5[5] <= num_decoder:deco2.port4
+hex5[6] <= num_decoder:deco2.port4
+hex5[7] <= num_decoder:deco2.port4
+led[0] <= math_sign:sign.port26
+led[1] <= math_sign:sign.port26
+led[2] <= math_sign:sign.port26
+led[3] <= math_sign:sign.port26
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA
+num => a.IN0
+sw[0] => sw[0].IN1
+sw[1] => sw[1].IN1
+sw[2] => sw[2].IN1
+sw[3] => sw[3].IN1
+sw[4] => sw[4].IN1
+sw[5] => sw[5].IN1
+sw[6] => sw[6].IN1
+en_in => a.IN1
+reset => reset.IN7
+out_6 <= d_latch:D6.port3
+out_5 <= d_latch:D5.port3
+out_4 <= d_latch:D4.port3
+out_3 <= d_latch:D3.port3
+out_2 <= d_latch:D2.port3
+out_1 <= d_latch:D1.port3
+out_0 <= d_latch:D0.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA|d_latch:D0
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA|d_latch:D1
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA|d_latch:D2
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA|d_latch:D3
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA|d_latch:D4
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA|d_latch:D5
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numA|d_latch:D6
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1
+I7 => I7.IN1
+I6 => I6.IN1
+I5 => I5.IN1
+I4 => I4.IN1
+I3 => I3.IN1
+I2 => I2.IN1
+I1 => I1.IN1
+I0 => outO1.IN1
+addOutput_7 <= outO8.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_6 <= outO7.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_5 <= outO6.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= outO5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= outO4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= outO3.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_1 <= outO2.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_0 <= outO1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1|add3_mod:U0
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1|add3_mod:U1
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1|add3_mod:U2
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1|add3_mod:U3
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1|add3_mod:U4
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1|add3_mod:U5
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp1|add3_mod:U6
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|num_decoder:deco1
+decInput_3 => b1.IN0
+decInput_3 => b2.IN0
+decInput_3 => c1.IN0
+decInput_3 => c2.IN0
+decInput_3 => a3.IN1
+decInput_3 => a6.IN1
+decInput_3 => d3.IN1
+decInput_3 => d6.IN1
+decInput_3 => d9.IN1
+decInput_3 => e1.IN0
+decInput_3 => e3.IN1
+decInput_3 => f2.IN1
+decInput_3 => f4.IN1
+decInput_3 => g2.IN1
+decInput_3 => g5.IN1
+decInput_2 => a5.IN1
+decInput_2 => b1.IN1
+decInput_2 => b4.IN1
+decInput_2 => b6.IN1
+decInput_2 => c1.IN1
+decInput_2 => d5.IN1
+decInput_2 => d8.IN1
+decInput_2 => e2.IN0
+decInput_2 => g4.IN1
+decInput_2 => a2.IN1
+decInput_2 => c4.IN1
+decInput_2 => d2.IN1
+decInput_2 => e5.IN1
+decInput_2 => f1.IN0
+decInput_2 => f3.IN0
+decInput_2 => g1.IN0
+decInput_1 => b2.IN1
+decInput_1 => b5.IN0
+decInput_1 => c2.IN1
+decInput_1 => c3.IN0
+decInput_1 => d7.IN0
+decInput_1 => f3.IN1
+decInput_1 => g3.IN0
+decInput_1 => a1.IN0
+decInput_1 => a4.IN0
+decInput_1 => b3.IN0
+decInput_1 => d1.IN0
+decInput_1 => d4.IN0
+decInput_1 => e2.IN1
+decInput_1 => e4.IN0
+decInput_1 => g1.IN1
+decInput_0 => a1.IN1
+decInput_0 => b3.IN1
+decInput_0 => d1.IN1
+decInput_0 => d7.IN1
+decInput_0 => e1.IN1
+decInput_0 => e4.IN1
+decInput_0 => f1.IN1
+decInput_0 => g3.IN1
+decInput_0 => a4.IN1
+decInput_0 => b5.IN1
+decInput_0 => c3.IN1
+decInput_0 => d4.IN1
+dispOut[0] <= a7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[1] <= b9.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[2] <= c6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[3] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[4] <= e7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[5] <= f5.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[6] <= g6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[7] <= <VCC>
+
+
+|DE10_LITE_Golden_Top|calculator:cal|num_decoder:deco2
+decInput_3 => b1.IN0
+decInput_3 => b2.IN0
+decInput_3 => c1.IN0
+decInput_3 => c2.IN0
+decInput_3 => a3.IN1
+decInput_3 => a6.IN1
+decInput_3 => d3.IN1
+decInput_3 => d6.IN1
+decInput_3 => d9.IN1
+decInput_3 => e1.IN0
+decInput_3 => e3.IN1
+decInput_3 => f2.IN1
+decInput_3 => f4.IN1
+decInput_3 => g2.IN1
+decInput_3 => g5.IN1
+decInput_2 => a5.IN1
+decInput_2 => b1.IN1
+decInput_2 => b4.IN1
+decInput_2 => b6.IN1
+decInput_2 => c1.IN1
+decInput_2 => d5.IN1
+decInput_2 => d8.IN1
+decInput_2 => e2.IN0
+decInput_2 => g4.IN1
+decInput_2 => a2.IN1
+decInput_2 => c4.IN1
+decInput_2 => d2.IN1
+decInput_2 => e5.IN1
+decInput_2 => f1.IN0
+decInput_2 => f3.IN0
+decInput_2 => g1.IN0
+decInput_1 => b2.IN1
+decInput_1 => b5.IN0
+decInput_1 => c2.IN1
+decInput_1 => c3.IN0
+decInput_1 => d7.IN0
+decInput_1 => f3.IN1
+decInput_1 => g3.IN0
+decInput_1 => a1.IN0
+decInput_1 => a4.IN0
+decInput_1 => b3.IN0
+decInput_1 => d1.IN0
+decInput_1 => d4.IN0
+decInput_1 => e2.IN1
+decInput_1 => e4.IN0
+decInput_1 => g1.IN1
+decInput_0 => a1.IN1
+decInput_0 => b3.IN1
+decInput_0 => d1.IN1
+decInput_0 => d7.IN1
+decInput_0 => e1.IN1
+decInput_0 => e4.IN1
+decInput_0 => f1.IN1
+decInput_0 => g3.IN1
+decInput_0 => a4.IN1
+decInput_0 => b5.IN1
+decInput_0 => c3.IN1
+decInput_0 => d4.IN1
+dispOut[0] <= a7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[1] <= b9.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[2] <= c6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[3] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[4] <= e7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[5] <= f5.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[6] <= g6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[7] <= <VCC>
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB
+num => a.IN0
+sw[0] => sw[0].IN1
+sw[1] => sw[1].IN1
+sw[2] => sw[2].IN1
+sw[3] => sw[3].IN1
+sw[4] => sw[4].IN1
+sw[5] => sw[5].IN1
+sw[6] => sw[6].IN1
+en_in => a.IN1
+reset => reset.IN7
+out_6 <= d_latch:D6.port3
+out_5 <= d_latch:D5.port3
+out_4 <= d_latch:D4.port3
+out_3 <= d_latch:D3.port3
+out_2 <= d_latch:D2.port3
+out_1 <= d_latch:D1.port3
+out_0 <= d_latch:D0.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB|d_latch:D0
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB|d_latch:D1
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB|d_latch:D2
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB|d_latch:D3
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB|d_latch:D4
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB|d_latch:D5
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|inputNum:numB|d_latch:D6
+d => q$latch.DATAIN
+en => q$latch.LATCH_ENABLE
+reset => q$latch.ACLR
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2
+I7 => I7.IN1
+I6 => I6.IN1
+I5 => I5.IN1
+I4 => I4.IN1
+I3 => I3.IN1
+I2 => I2.IN1
+I1 => I1.IN1
+I0 => outO1.IN1
+addOutput_7 <= outO8.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_6 <= outO7.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_5 <= outO6.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= outO5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= outO4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= outO3.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_1 <= outO2.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_0 <= outO1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2|add3_mod:U0
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2|add3_mod:U1
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2|add3_mod:U2
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2|add3_mod:U3
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2|add3_mod:U4
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2|add3_mod:U5
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp2|add3_mod:U6
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|num_decoder:deco3
+decInput_3 => b1.IN0
+decInput_3 => b2.IN0
+decInput_3 => c1.IN0
+decInput_3 => c2.IN0
+decInput_3 => a3.IN1
+decInput_3 => a6.IN1
+decInput_3 => d3.IN1
+decInput_3 => d6.IN1
+decInput_3 => d9.IN1
+decInput_3 => e1.IN0
+decInput_3 => e3.IN1
+decInput_3 => f2.IN1
+decInput_3 => f4.IN1
+decInput_3 => g2.IN1
+decInput_3 => g5.IN1
+decInput_2 => a5.IN1
+decInput_2 => b1.IN1
+decInput_2 => b4.IN1
+decInput_2 => b6.IN1
+decInput_2 => c1.IN1
+decInput_2 => d5.IN1
+decInput_2 => d8.IN1
+decInput_2 => e2.IN0
+decInput_2 => g4.IN1
+decInput_2 => a2.IN1
+decInput_2 => c4.IN1
+decInput_2 => d2.IN1
+decInput_2 => e5.IN1
+decInput_2 => f1.IN0
+decInput_2 => f3.IN0
+decInput_2 => g1.IN0
+decInput_1 => b2.IN1
+decInput_1 => b5.IN0
+decInput_1 => c2.IN1
+decInput_1 => c3.IN0
+decInput_1 => d7.IN0
+decInput_1 => f3.IN1
+decInput_1 => g3.IN0
+decInput_1 => a1.IN0
+decInput_1 => a4.IN0
+decInput_1 => b3.IN0
+decInput_1 => d1.IN0
+decInput_1 => d4.IN0
+decInput_1 => e2.IN1
+decInput_1 => e4.IN0
+decInput_1 => g1.IN1
+decInput_0 => a1.IN1
+decInput_0 => b3.IN1
+decInput_0 => d1.IN1
+decInput_0 => d7.IN1
+decInput_0 => e1.IN1
+decInput_0 => e4.IN1
+decInput_0 => f1.IN1
+decInput_0 => g3.IN1
+decInput_0 => a4.IN1
+decInput_0 => b5.IN1
+decInput_0 => c3.IN1
+decInput_0 => d4.IN1
+dispOut[0] <= a7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[1] <= b9.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[2] <= c6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[3] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[4] <= e7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[5] <= f5.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[6] <= g6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[7] <= <VCC>
+
+
+|DE10_LITE_Golden_Top|calculator:cal|num_decoder:deco4
+decInput_3 => b1.IN0
+decInput_3 => b2.IN0
+decInput_3 => c1.IN0
+decInput_3 => c2.IN0
+decInput_3 => a3.IN1
+decInput_3 => a6.IN1
+decInput_3 => d3.IN1
+decInput_3 => d6.IN1
+decInput_3 => d9.IN1
+decInput_3 => e1.IN0
+decInput_3 => e3.IN1
+decInput_3 => f2.IN1
+decInput_3 => f4.IN1
+decInput_3 => g2.IN1
+decInput_3 => g5.IN1
+decInput_2 => a5.IN1
+decInput_2 => b1.IN1
+decInput_2 => b4.IN1
+decInput_2 => b6.IN1
+decInput_2 => c1.IN1
+decInput_2 => d5.IN1
+decInput_2 => d8.IN1
+decInput_2 => e2.IN0
+decInput_2 => g4.IN1
+decInput_2 => a2.IN1
+decInput_2 => c4.IN1
+decInput_2 => d2.IN1
+decInput_2 => e5.IN1
+decInput_2 => f1.IN0
+decInput_2 => f3.IN0
+decInput_2 => g1.IN0
+decInput_1 => b2.IN1
+decInput_1 => b5.IN0
+decInput_1 => c2.IN1
+decInput_1 => c3.IN0
+decInput_1 => d7.IN0
+decInput_1 => f3.IN1
+decInput_1 => g3.IN0
+decInput_1 => a1.IN0
+decInput_1 => a4.IN0
+decInput_1 => b3.IN0
+decInput_1 => d1.IN0
+decInput_1 => d4.IN0
+decInput_1 => e2.IN1
+decInput_1 => e4.IN0
+decInput_1 => g1.IN1
+decInput_0 => a1.IN1
+decInput_0 => b3.IN1
+decInput_0 => d1.IN1
+decInput_0 => d7.IN1
+decInput_0 => e1.IN1
+decInput_0 => e4.IN1
+decInput_0 => f1.IN1
+decInput_0 => g3.IN1
+decInput_0 => a4.IN1
+decInput_0 => b5.IN1
+decInput_0 => c3.IN1
+decInput_0 => d4.IN1
+dispOut[0] <= a7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[1] <= b9.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[2] <= c6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[3] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[4] <= e7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[5] <= f5.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[6] <= g6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[7] <= <VCC>
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign
+onOff => SW0_new.IN0
+onOff => SW1_new.IN0
+onOff => SW2_new.IN0
+onOff => SW3_new.IN0
+onOff => a1.IN0
+onOff => a2.IN0
+onOff => a3.IN0
+onOff => a4.IN0
+onOff => a5.IN0
+onOff => a6.IN0
+onOff => a7.IN0
+onOff => a8.IN0
+onOff => a9.IN0
+onOff => a10.IN0
+onOff => a11.IN0
+onOff => a12.IN0
+onOff => a13.IN0
+onOff => a14.IN0
+A6 => a1.IN1
+A5 => a2.IN1
+A4 => a3.IN1
+A3 => a4.IN1
+A2 => a5.IN1
+A1 => a6.IN1
+A0 => a7.IN1
+B6 => a8.IN1
+B5 => a9.IN1
+B4 => a10.IN1
+B3 => a11.IN1
+B2 => a12.IN1
+B1 => a13.IN1
+B0 => a14.IN1
+SW0 => SW0_new.IN1
+SW1 => SW1_new.IN1
+SW2 => SW2_new.IN1
+SW3 => SW3_new.IN1
+ans_6 <= o1.DB_MAX_OUTPUT_PORT_TYPE
+ans_5 <= o2.DB_MAX_OUTPUT_PORT_TYPE
+ans_4 <= o3.DB_MAX_OUTPUT_PORT_TYPE
+ans_3 <= o4.DB_MAX_OUTPUT_PORT_TYPE
+ans_2 <= o5.DB_MAX_OUTPUT_PORT_TYPE
+ans_1 <= o6.DB_MAX_OUTPUT_PORT_TYPE
+ans_0 <= o7.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= SW0_new.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= SW1_new.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= SW2_new.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= SW3_new.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add
+sub => x2.IN0
+sub => x3.IN0
+sub => x4.IN0
+sub => x5.IN0
+sub => x6.IN0
+sub => x7.IN0
+sub => x8.IN0
+sub => x10.IN1
+sub => w1.IN1
+A7 => ~NO_FANOUT~
+A6 => A6.IN1
+A5 => A5.IN1
+A4 => A4.IN1
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+B7 => ~NO_FANOUT~
+B6 => x8.IN1
+B5 => x7.IN1
+B4 => x6.IN1
+B3 => x5.IN1
+B2 => x4.IN1
+B1 => x3.IN1
+B0 => x2.IN1
+S7 <= <GND>
+S6 <= or2.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= or3.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= or4.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= or5.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= or6.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= or7.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= or8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:add|full_add:add7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff
+sub => x2.IN0
+sub => x3.IN0
+sub => x4.IN0
+sub => x5.IN0
+sub => x6.IN0
+sub => x7.IN0
+sub => x8.IN0
+sub => x10.IN1
+sub => w1.IN1
+A7 => ~NO_FANOUT~
+A6 => A6.IN1
+A5 => A5.IN1
+A4 => A4.IN1
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+B7 => ~NO_FANOUT~
+B6 => x8.IN1
+B5 => x7.IN1
+B4 => x6.IN1
+B3 => x5.IN1
+B2 => x4.IN1
+B1 => x3.IN1
+B0 => x2.IN1
+S7 <= <GND>
+S6 <= or2.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= or3.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= or4.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= or5.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= or6.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= or7.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= or8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|bit8_adder:diff|full_add:add7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi
+A7 => comb.IN0
+A7 => comb.IN0
+A7 => comb.IN0
+A7 => comb.IN0
+A7 => comb.IN0
+A7 => comb.IN0
+A7 => comb.IN0
+A7 => comb.IN0
+A6 => comb.IN0
+A6 => comb.IN0
+A6 => comb.IN0
+A6 => comb.IN0
+A6 => comb.IN0
+A6 => comb.IN0
+A6 => comb.IN0
+A6 => comb.IN0
+A5 => comb.IN0
+A5 => comb.IN0
+A5 => comb.IN0
+A5 => comb.IN0
+A5 => comb.IN0
+A5 => comb.IN0
+A5 => comb.IN0
+A5 => comb.IN0
+A4 => comb.IN0
+A4 => comb.IN0
+A4 => comb.IN0
+A4 => comb.IN0
+A4 => comb.IN0
+A4 => comb.IN0
+A4 => comb.IN0
+A4 => comb.IN0
+A3 => comb.IN0
+A3 => comb.IN0
+A3 => comb.IN0
+A3 => comb.IN0
+A3 => comb.IN0
+A3 => comb.IN0
+A3 => comb.IN0
+A3 => comb.IN0
+A2 => comb.IN0
+A2 => comb.IN0
+A2 => comb.IN0
+A2 => comb.IN0
+A2 => comb.IN0
+A2 => comb.IN0
+A2 => comb.IN0
+A2 => comb.IN0
+A1 => comb.IN0
+A1 => comb.IN0
+A1 => comb.IN0
+A1 => comb.IN0
+A1 => comb.IN0
+A1 => comb.IN0
+A1 => comb.IN0
+A1 => comb.IN0
+A0 => w0[0].IN0
+A0 => comb.IN0
+A0 => comb.IN0
+A0 => comb.IN0
+A0 => comb.IN0
+A0 => comb.IN0
+A0 => comb.IN0
+A0 => comb.IN0
+B7 => comb.IN1
+B7 => comb.IN1
+B7 => comb.IN1
+B7 => comb.IN1
+B7 => comb.IN1
+B7 => comb.IN1
+B7 => comb.IN1
+B7 => comb.IN1
+B6 => comb.IN1
+B6 => comb.IN1
+B6 => comb.IN1
+B6 => comb.IN1
+B6 => comb.IN1
+B6 => comb.IN1
+B6 => comb.IN1
+B6 => comb.IN1
+B5 => comb.IN1
+B5 => comb.IN1
+B5 => comb.IN1
+B5 => comb.IN1
+B5 => comb.IN1
+B5 => comb.IN1
+B5 => comb.IN1
+B5 => comb.IN1
+B4 => comb.IN1
+B4 => comb.IN1
+B4 => comb.IN1
+B4 => comb.IN1
+B4 => comb.IN1
+B4 => comb.IN1
+B4 => comb.IN1
+B4 => comb.IN1
+B3 => comb.IN1
+B3 => comb.IN1
+B3 => comb.IN1
+B3 => comb.IN1
+B3 => comb.IN1
+B3 => comb.IN1
+B3 => comb.IN1
+B3 => comb.IN1
+B2 => comb.IN1
+B2 => comb.IN1
+B2 => comb.IN1
+B2 => comb.IN1
+B2 => comb.IN1
+B2 => comb.IN1
+B2 => comb.IN1
+B2 => comb.IN1
+B1 => comb.IN1
+B1 => comb.IN1
+B1 => comb.IN1
+B1 => comb.IN1
+B1 => comb.IN1
+B1 => comb.IN1
+B1 => comb.IN1
+B1 => comb.IN1
+B0 => w0[0].IN1
+B0 => comb.IN1
+B0 => comb.IN1
+B0 => comb.IN1
+B0 => comb.IN1
+B0 => comb.IN1
+B0 => comb.IN1
+B0 => comb.IN1
+c_new_6 <= a7.DB_MAX_OUTPUT_PORT_TYPE
+c_new_5 <= a6.DB_MAX_OUTPUT_PORT_TYPE
+c_new_4 <= a5.DB_MAX_OUTPUT_PORT_TYPE
+c_new_3 <= a4.DB_MAX_OUTPUT_PORT_TYPE
+c_new_2 <= a3.DB_MAX_OUTPUT_PORT_TYPE
+c_new_1 <= a2.DB_MAX_OUTPUT_PORT_TYPE
+c_new_0 <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0
+i[0] => i[0].IN1
+i[1] => i[1].IN1
+i[2] => i[2].IN1
+i[3] => i[3].IN1
+i[4] => i[4].IN1
+i[5] => i[5].IN1
+i[6] => i[6].IN1
+i[7] => i[7].IN1
+j[0] => j[0].IN1
+j[1] => j[1].IN1
+j[2] => j[2].IN1
+j[3] => j[3].IN1
+j[4] => j[4].IN1
+j[5] => j[5].IN1
+j[6] => j[6].IN1
+j[7] => ~NO_FANOUT~
+carryin => carryin.IN1
+carryout <= full_add:f8.port4
+s[0] <= full_add:f1.port3
+s[1] <= full_add:f2.port3
+s[2] <= full_add:f3.port3
+s[3] <= full_add:f4.port3
+s[4] <= full_add:f5.port3
+s[5] <= full_add:f6.port3
+s[6] <= full_add:f7.port3
+s[7] <= full_add:f8.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f8
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f8|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder0|full_add:f8|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1
+i[0] => i[0].IN1
+i[1] => i[1].IN1
+i[2] => i[2].IN1
+i[3] => i[3].IN1
+i[4] => i[4].IN1
+i[5] => i[5].IN1
+i[6] => i[6].IN1
+i[7] => i[7].IN1
+j[0] => j[0].IN1
+j[1] => j[1].IN1
+j[2] => j[2].IN1
+j[3] => j[3].IN1
+j[4] => j[4].IN1
+j[5] => j[5].IN1
+j[6] => j[6].IN1
+j[7] => ~NO_FANOUT~
+carryin => carryin.IN1
+carryout <= full_add:f8.port4
+s[0] <= full_add:f1.port3
+s[1] <= full_add:f2.port3
+s[2] <= full_add:f3.port3
+s[3] <= full_add:f4.port3
+s[4] <= full_add:f5.port3
+s[5] <= full_add:f6.port3
+s[6] <= full_add:f7.port3
+s[7] <= full_add:f8.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f8
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f8|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adder1|full_add:f8|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2
+i[0] => i[0].IN1
+i[1] => i[1].IN1
+i[2] => i[2].IN1
+i[3] => i[3].IN1
+i[4] => i[4].IN1
+i[5] => i[5].IN1
+i[6] => i[6].IN1
+i[7] => i[7].IN1
+j[0] => j[0].IN1
+j[1] => j[1].IN1
+j[2] => j[2].IN1
+j[3] => j[3].IN1
+j[4] => j[4].IN1
+j[5] => j[5].IN1
+j[6] => j[6].IN1
+j[7] => ~NO_FANOUT~
+carryin => carryin.IN1
+carryout <= full_add:f8.port4
+s[0] <= full_add:f1.port3
+s[1] <= full_add:f2.port3
+s[2] <= full_add:f3.port3
+s[3] <= full_add:f4.port3
+s[4] <= full_add:f5.port3
+s[5] <= full_add:f6.port3
+s[6] <= full_add:f7.port3
+s[7] <= full_add:f8.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f8
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f8|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde2|full_add:f8|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3
+i[0] => i[0].IN1
+i[1] => i[1].IN1
+i[2] => i[2].IN1
+i[3] => i[3].IN1
+i[4] => i[4].IN1
+i[5] => i[5].IN1
+i[6] => i[6].IN1
+i[7] => i[7].IN1
+j[0] => j[0].IN1
+j[1] => j[1].IN1
+j[2] => j[2].IN1
+j[3] => j[3].IN1
+j[4] => j[4].IN1
+j[5] => j[5].IN1
+j[6] => j[6].IN1
+j[7] => ~NO_FANOUT~
+carryin => carryin.IN1
+carryout <= full_add:f8.port4
+s[0] <= full_add:f1.port3
+s[1] <= full_add:f2.port3
+s[2] <= full_add:f3.port3
+s[3] <= full_add:f4.port3
+s[4] <= full_add:f5.port3
+s[5] <= full_add:f6.port3
+s[6] <= full_add:f7.port3
+s[7] <= full_add:f8.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f8
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f8|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde3|full_add:f8|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4
+i[0] => i[0].IN1
+i[1] => i[1].IN1
+i[2] => i[2].IN1
+i[3] => i[3].IN1
+i[4] => i[4].IN1
+i[5] => i[5].IN1
+i[6] => i[6].IN1
+i[7] => i[7].IN1
+j[0] => j[0].IN1
+j[1] => j[1].IN1
+j[2] => j[2].IN1
+j[3] => j[3].IN1
+j[4] => j[4].IN1
+j[5] => j[5].IN1
+j[6] => j[6].IN1
+j[7] => ~NO_FANOUT~
+carryin => carryin.IN1
+carryout <= full_add:f8.port4
+s[0] <= full_add:f1.port3
+s[1] <= full_add:f2.port3
+s[2] <= full_add:f3.port3
+s[3] <= full_add:f4.port3
+s[4] <= full_add:f5.port3
+s[5] <= full_add:f6.port3
+s[6] <= full_add:f7.port3
+s[7] <= full_add:f8.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f8
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f8|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde4|full_add:f8|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5
+i[0] => i[0].IN1
+i[1] => i[1].IN1
+i[2] => i[2].IN1
+i[3] => i[3].IN1
+i[4] => i[4].IN1
+i[5] => i[5].IN1
+i[6] => i[6].IN1
+i[7] => i[7].IN1
+j[0] => j[0].IN1
+j[1] => j[1].IN1
+j[2] => j[2].IN1
+j[3] => j[3].IN1
+j[4] => j[4].IN1
+j[5] => j[5].IN1
+j[6] => j[6].IN1
+j[7] => ~NO_FANOUT~
+carryin => carryin.IN1
+carryout <= full_add:f8.port4
+s[0] <= full_add:f1.port3
+s[1] <= full_add:f2.port3
+s[2] <= full_add:f3.port3
+s[3] <= full_add:f4.port3
+s[4] <= full_add:f5.port3
+s[5] <= full_add:f6.port3
+s[6] <= full_add:f7.port3
+s[7] <= full_add:f8.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f8
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f8|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde5|full_add:f8|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6
+i[0] => i[0].IN1
+i[1] => i[1].IN1
+i[2] => i[2].IN1
+i[3] => i[3].IN1
+i[4] => i[4].IN1
+i[5] => i[5].IN1
+i[6] => i[6].IN1
+i[7] => i[7].IN1
+j[0] => j[0].IN1
+j[1] => j[1].IN1
+j[2] => j[2].IN1
+j[3] => j[3].IN1
+j[4] => j[4].IN1
+j[5] => j[5].IN1
+j[6] => j[6].IN1
+j[7] => ~NO_FANOUT~
+carryin => carryin.IN1
+carryout <= full_add:f8.port4
+s[0] <= full_add:f1.port3
+s[1] <= full_add:f2.port3
+s[2] <= full_add:f3.port3
+s[3] <= full_add:f4.port3
+s[4] <= full_add:f5.port3
+s[5] <= full_add:f6.port3
+s[6] <= full_add:f7.port3
+s[7] <= full_add:f8.port3
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f1
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f1|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f1|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f2
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f2|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f2|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f3
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f3|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f3|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f4
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f4|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f4|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f5
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f5|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f5|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f6
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f6|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f6|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f7
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f7|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f7|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f8
+a => a.IN1
+b => b.IN1
+cin => cin.IN1
+sum <= half_add:h2.s
+cout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f8|half_add:h1
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|multiplier:multi|eight_bit_full_adder:adde6|full_add:f8|half_add:h2
+a => x1.IN0
+a => a1.IN0
+b => x1.IN1
+b => a1.IN1
+s <= x1.DB_MAX_OUTPUT_PORT_TYPE
+c <= a1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div
+A6 => A6.IN1
+A5 => A5.IN1
+A4 => A4.IN1
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+B6 => B6.IN7
+B5 => B5.IN7
+B4 => B4.IN7
+B3 => B3.IN7
+B2 => B2.IN7
+B1 => B1.IN7
+B0 => B0.IN7
+Q6 <= UnitCell:u7.port5
+Q5 <= UnitCell:u15.port5
+Q4 <= UnitCell:u23.port5
+Q3 <= UnitCell:u31.port5
+Q2 <= UnitCell:u39.port5
+Q1 <= UnitCell:u47.port5
+Q0 <= UnitCell:u55.port5
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u1
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u1|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u1|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u2
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u2|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u2|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u3
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u3|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u3|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u4
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u4|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u4|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u5
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u5|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u5|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u6
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u6|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u6|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u7
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u7|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u7|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u8
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u8|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u8|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u9
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u9|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u9|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u10
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u10|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u10|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u11
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u11|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u11|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u12
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u12|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u12|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u13
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u13|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u13|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u14
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u14|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u14|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u15
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u15|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u15|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u16
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u16|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u16|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u17
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u17|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u17|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u18
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u18|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u18|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u19
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u19|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u19|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u20
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u20|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u20|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u21
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u21|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u21|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u22
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u22|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u22|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u23
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u23|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u23|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u24
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u24|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u24|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u25
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u25|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u25|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u26
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u26|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u26|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u27
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u27|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u27|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u28
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u28|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u28|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u29
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u29|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u29|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u30
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u30|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u30|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u31
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u31|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u31|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u32
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u32|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u32|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u33
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u33|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u33|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u34
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u34|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u34|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u35
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u35|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u35|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u36
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u36|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u36|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u37
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u37|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u37|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u38
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u38|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u38|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u39
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u39|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u39|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u40
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u40|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u40|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u41
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u41|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u41|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u42
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u42|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u42|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u43
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u43|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u43|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u44
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u44|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u44|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u45
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u45|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u45|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u46
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u46|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u46|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u47
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u47|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u47|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u48
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u48|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u48|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u49
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u49|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u49|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u50
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u50|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u50|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u51
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u51|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u51|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u52
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u52|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u52|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u53
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u53|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u53|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u54
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u54|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u54|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u55
+x => x.IN2
+y => y.IN1
+bin => bin.IN1
+s => s.IN1
+Y <= Mux:m1.port3
+bout <= FullSubtractor:FS1.port4
+out_s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u55|FullSubtractor:FS1
+x => x1.IN0
+x => a1.IN1
+y => x1.IN1
+y => x3.IN0
+y => a2.IN0
+bin => x2.IN1
+bin => x3.IN1
+bin => a2.IN1
+d <= x2.DB_MAX_OUTPUT_PORT_TYPE
+bout <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|math_sign:sign|Divider:div|UnitCell:u55|Mux:m1
+I0 => a1.IN0
+I1 => a2.IN0
+S => a2.IN1
+S => a1.IN1
+Y <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3
+I7 => I7.IN1
+I6 => I6.IN1
+I5 => I5.IN1
+I4 => I4.IN1
+I3 => I3.IN1
+I2 => I2.IN1
+I1 => I1.IN1
+I0 => outO1.IN1
+addOutput_7 <= outO8.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_6 <= outO7.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_5 <= outO6.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= outO5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= outO4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= outO3.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_1 <= outO2.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_0 <= outO1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3|add3_mod:U0
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3|add3_mod:U1
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3|add3_mod:U2
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3|add3_mod:U3
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3|add3_mod:U4
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3|add3_mod:U5
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|bin2BCD:disp3|add3_mod:U6
+addInput_1 => s3_4.IN1
+addInput_1 => s2_1.IN0
+addInput_1 => s1_1.IN0
+addInput_1 => s0_1.IN0
+addInput_1 => s0_3.IN1
+addInput_2 => s3_1.IN0
+addInput_2 => s3_2.IN0
+addInput_2 => s2_3.IN1
+addInput_2 => s0_5.IN1
+addInput_2 => s1_2.IN0
+addInput_2 => s0_2.IN0
+addInput_3 => s3_2.IN1
+addInput_3 => s1_2.IN1
+addInput_3 => s1_3.IN0
+addInput_3 => s0_4.IN0
+addInput_3 => s2_2.IN0
+addInput_4 => s3_1.IN1
+addInput_4 => s2_1.IN1
+addInput_4 => s1_3.IN1
+addInput_4 => s0_2.IN1
+addInput_4 => s2_2.IN1
+addInput_4 => s1_1.IN1
+addInput_4 => s0_1.IN1
+addInput_4 => s0_4.IN1
+addOutput_1 <= s3_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_2 <= s2_4.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_3 <= s1_5.DB_MAX_OUTPUT_PORT_TYPE
+addOutput_4 <= s0_7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE10_LITE_Golden_Top|calculator:cal|num_decoder:deco5
+decInput_3 => b1.IN0
+decInput_3 => b2.IN0
+decInput_3 => c1.IN0
+decInput_3 => c2.IN0
+decInput_3 => a3.IN1
+decInput_3 => a6.IN1
+decInput_3 => d3.IN1
+decInput_3 => d6.IN1
+decInput_3 => d9.IN1
+decInput_3 => e1.IN0
+decInput_3 => e3.IN1
+decInput_3 => f2.IN1
+decInput_3 => f4.IN1
+decInput_3 => g2.IN1
+decInput_3 => g5.IN1
+decInput_2 => a5.IN1
+decInput_2 => b1.IN1
+decInput_2 => b4.IN1
+decInput_2 => b6.IN1
+decInput_2 => c1.IN1
+decInput_2 => d5.IN1
+decInput_2 => d8.IN1
+decInput_2 => e2.IN0
+decInput_2 => g4.IN1
+decInput_2 => a2.IN1
+decInput_2 => c4.IN1
+decInput_2 => d2.IN1
+decInput_2 => e5.IN1
+decInput_2 => f1.IN0
+decInput_2 => f3.IN0
+decInput_2 => g1.IN0
+decInput_1 => b2.IN1
+decInput_1 => b5.IN0
+decInput_1 => c2.IN1
+decInput_1 => c3.IN0
+decInput_1 => d7.IN0
+decInput_1 => f3.IN1
+decInput_1 => g3.IN0
+decInput_1 => a1.IN0
+decInput_1 => a4.IN0
+decInput_1 => b3.IN0
+decInput_1 => d1.IN0
+decInput_1 => d4.IN0
+decInput_1 => e2.IN1
+decInput_1 => e4.IN0
+decInput_1 => g1.IN1
+decInput_0 => a1.IN1
+decInput_0 => b3.IN1
+decInput_0 => d1.IN1
+decInput_0 => d7.IN1
+decInput_0 => e1.IN1
+decInput_0 => e4.IN1
+decInput_0 => f1.IN1
+decInput_0 => g3.IN1
+decInput_0 => a4.IN1
+decInput_0 => b5.IN1
+decInput_0 => c3.IN1
+decInput_0 => d4.IN1
+dispOut[0] <= a7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[1] <= b9.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[2] <= c6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[3] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[4] <= e7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[5] <= f5.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[6] <= g6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[7] <= <VCC>
+
+
+|DE10_LITE_Golden_Top|calculator:cal|num_decoder:deco6
+decInput_3 => b1.IN0
+decInput_3 => b2.IN0
+decInput_3 => c1.IN0
+decInput_3 => c2.IN0
+decInput_3 => a3.IN1
+decInput_3 => a6.IN1
+decInput_3 => d3.IN1
+decInput_3 => d6.IN1
+decInput_3 => d9.IN1
+decInput_3 => e1.IN0
+decInput_3 => e3.IN1
+decInput_3 => f2.IN1
+decInput_3 => f4.IN1
+decInput_3 => g2.IN1
+decInput_3 => g5.IN1
+decInput_2 => a5.IN1
+decInput_2 => b1.IN1
+decInput_2 => b4.IN1
+decInput_2 => b6.IN1
+decInput_2 => c1.IN1
+decInput_2 => d5.IN1
+decInput_2 => d8.IN1
+decInput_2 => e2.IN0
+decInput_2 => g4.IN1
+decInput_2 => a2.IN1
+decInput_2 => c4.IN1
+decInput_2 => d2.IN1
+decInput_2 => e5.IN1
+decInput_2 => f1.IN0
+decInput_2 => f3.IN0
+decInput_2 => g1.IN0
+decInput_1 => b2.IN1
+decInput_1 => b5.IN0
+decInput_1 => c2.IN1
+decInput_1 => c3.IN0
+decInput_1 => d7.IN0
+decInput_1 => f3.IN1
+decInput_1 => g3.IN0
+decInput_1 => a1.IN0
+decInput_1 => a4.IN0
+decInput_1 => b3.IN0
+decInput_1 => d1.IN0
+decInput_1 => d4.IN0
+decInput_1 => e2.IN1
+decInput_1 => e4.IN0
+decInput_1 => g1.IN1
+decInput_0 => a1.IN1
+decInput_0 => b3.IN1
+decInput_0 => d1.IN1
+decInput_0 => d7.IN1
+decInput_0 => e1.IN1
+decInput_0 => e4.IN1
+decInput_0 => f1.IN1
+decInput_0 => g3.IN1
+decInput_0 => a4.IN1
+decInput_0 => b5.IN1
+decInput_0 => c3.IN1
+decInput_0 => d4.IN1
+dispOut[0] <= a7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[1] <= b9.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[2] <= c6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[3] <= d11.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[4] <= e7.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[5] <= f5.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[6] <= g6.DB_MAX_OUTPUT_PORT_TYPE
+dispOut[7] <= <VCC>
+
+

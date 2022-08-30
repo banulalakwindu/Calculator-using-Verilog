@@ -1,0 +1,19 @@
+module inputNum(input [7:0]sw ,en,pb,output [7:0]out);
+						
+		wire reset;
+		wire  [7:0]d_out;
+		assign reset=pb;
+		
+		d_latch D0(sw[0],en,reset,d_out[0]);
+		d_latch D1(sw[1],en,reset,d_out[1]);
+		d_latch D2(sw[2],en,reset,d_out[2]);
+		d_latch D3(sw[3],en,reset,d_out[3]);
+		d_latch D4(sw[4],en,reset,d_out[4]);
+		d_latch D5(sw[5],en,reset,d_out[5]);
+		d_latch D6(sw[6],en,reset,d_out[6]);
+		d_latch D7(sw[7],en,reset,d_out[7]);
+		
+		assign out=d_out;			
+			
+			
+endmodule

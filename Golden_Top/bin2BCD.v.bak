@@ -1,0 +1,36 @@
+module bin2BCD(input [7:0] addInput, output [11:0] addOutput);
+
+wire add3_1_S3, add3_1_S2, add3_1_S1, add3_1_S0, add3_2_S3, add3_2_S2, add3_2_S1, add3_2_S0, add3_3_S3, add3_3_S2, add3_3_S1, add3_3_S0, add3_4_S3, add3_4_S2, add3_4_S1, add3_4_S0, add3_5_S3, add3_5_S2, add3_5_S1, add3_5_S0, add3_6_S3, add3_6_S2, add3_6_S1, add3_6_S0 ;
+
+//inputs
+assign I7 = addInput[7];
+assign I6 = addInput[6];
+assign I5 = addInput[5];
+assign I4 = addInput[4];
+assign I3 = addInput[3];
+assign I2 = addInput[2];
+assign I1 = addInput[1];
+assign I0 = addInput[0];
+
+add3_mod U0(0,I7,I6,I5,add3_1_S3,add3_1_S2,add3_1_S1,add3_1_S0);
+add3_mod U1(add3_1_S2,add3_1_S1,add3_1_S0,I4,add3_2_S3,add3_2_S2,add3_2_S1,add3_2_S0);
+add3_mod U2(add3_2_S2,add3_2_S1,add3_2_S0,I3,add3_3_S3,add3_3_S2,add3_3_S1,add3_3_S0);
+add3_mod U3(add3_3_S2,add3_3_S1,add3_3_S0,I2,add3_4_S3,add3_4_S2,add3_4_S1,add3_4_S0);
+add3_mod U4(add3_4_S2,add3_4_S1,add3_4_S0,I1,add3_5_S3,add3_5_S2,add3_5_S1,add3_5_S0);
+add3_mod U5(0,add3_1_S3,add3_2_S3,add3_3_S3,add3_6_S3,add3_6_S2,add3_6_S1,add3_6_S0);
+add3_mod U6(add3_6_S2,add3_6_S1,add3_6_S0,add3_4_S3,add3_7_S3,add3_7_S2,add3_7_S1,add3_7_S0);
+
+assign addOutput[11] = 0;
+assign addOutput[10] = 0;
+assign addOutput[9] = add3_6_S3;
+assign addOutput[8] = add3_7_S3;
+assign addOutput[7] = add3_7_S2;
+assign addOutput[6] = add3_7_S1;
+assign addOutput[5] = add3_7_S0;
+assign addOutput[4] = add3_5_S3;
+assign addOutput[3] = add3_5_S2;
+assign addOutput[2] = add3_5_S1;
+assign addOutput[1] = add3_5_S0;
+assign addOutput[0] = I0;
+
+endmodule

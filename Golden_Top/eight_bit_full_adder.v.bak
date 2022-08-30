@@ -1,0 +1,19 @@
+module eight_bit_full_adder ( [7:0]i,[7:0]j, carryin , carryout,[7:0]s);
+input carryin,[7:0]i,[7:0]j;
+output [7:0]s,carryout;
+
+wire [7:0]w;
+
+//tow_bit_full_adder (x,y,cin,cout,S);
+
+tow_bit_full_adder f1(i[0],j[0],0,w[0],s[0]);
+tow_bit_full_adder f2(i[1],j[1],w[0],w[1],s[1]);
+tow_bit_full_adder f3(i[2],j[2],w[1],w[2],s[2]);
+tow_bit_full_adder f4(i[3],j[3],w[2],w[3],s[3]);
+tow_bit_full_adder f5(i[4],j[4],w[3],w[4],s[4]);
+tow_bit_full_adder f6(i[5],j[5],w[4],w[5],s[5]);
+tow_bit_full_adder f7(i[6],j[6],w[5],w[6],s[6]);
+tow_bit_full_adder f8(i[7],carryin,w[6],carryout,s[7]);
+
+
+endmodule 

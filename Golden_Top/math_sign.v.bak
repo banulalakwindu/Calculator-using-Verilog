@@ -1,0 +1,58 @@
+module math_sign(input [3:0] decInput, output [7:0] dispOut);
+
+wire wa1,wa2,wb1,wb2,wd1,wd2,wd3,wd4,wd5,wd6,we1,we2,wg1,wg2;
+
+//inputs
+assign A = decInput[0];
+assign B = decInput[1];
+assign C = decInput[2];
+assign D = decInput[3];
+
+//outputs
+assign dispOut[0] = aOut;
+assign dispOut[1] = bOut;
+assign dispOut[2] = 0;
+assign dispOut[3] = dOut;
+assign dispOut[4] = eOut;
+assign dispOut[5] = 0;
+assign dispOut[6] = gOut;
+assign dispOut[7] = 1;
+
+//nots
+assign nA = ~A;
+assign nB = ~B;
+assign nC = ~C;
+assign nD = ~D;
+
+//aOut
+and a1(wa1,nA,nB);
+and a2(wa2,wa1,C);
+and a3(aOut,wa2,nD);
+
+//bOut
+and b1(wb1,nA,B);
+and b2(wb2,wb1,nC);
+and b3(bOut,wb2,nD);
+
+//dOut
+and d1(wd1,nA,nB);
+and d2(wd2,wd1,C);
+and d3(wd3,wd2,nD);
+
+and d4(wd4,A,nB);
+and d5(wd5,wd4,nC);
+and d6(wd6,wd5,nD);
+
+or d7(dOut,wd6,wd3);
+
+//eOut
+and e1(we1,nA,B);
+and e2(we2,we1,nC);
+and e3(eOut,we2,nD);
+
+//gOut
+and g1(wg1,nA,nB);
+and g2(wg2,wg1,nC);
+and g3(gOut,wg2,D);
+
+endmodule

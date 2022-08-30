@@ -1,0 +1,37 @@
+module Divider(input A6,A5,A4,A3,A2,A1,A0,B6,B5,B4,B3,B2,B1,B0, output Q6,Q5.Q4,Q3,Q2,Q1,Q0);
+
+UnitCell u1(A3,B0,1'b0,u2_sout,u1_out,u1_bout,u1_sout);
+UnitCell u2(A4,B1,u1_bout,u3_sout,u2_out,u2_bout,u2_sout);
+UnitCell u3(A5,B2,u2_bout,u4_sout,u3_out,u3_bout,u3_sout);
+UnitCell u4(A6,B3,u3_bout,~(u3_bout),u4_out,u4_bout,u4_sout);
+
+assign Q3 = ~u3_bout;
+
+UnitCell u5(A2,B0,1'b0,u6_sout,u5_out,u5_bout,u5_sout);
+UnitCell u6(u1_out,B1,u5_bout,u7_sout,u6_out,u6_bout,u6_sout);
+UnitCell u7(u2_out,B2,u6_bout,u8_sout,u7_out,u7_bout,u7_sout);
+UnitCell u8(u3_out,B3,u7_bout,u9_sout,u8_out,u8_bout,u8_sout);
+UnitCell u9(u4_out,0,u8_bout,~(u8_bout),u9_out,u9_bout,u9_sout);
+
+assign Q2 = ~u8_bout;
+
+UnitCell u10(A1,B0,1'b0,u11_sout,u10_out,u10_bout,u10_sout);
+UnitCell u11(u5_out,B1,u10_bout,u12_sout,u11_out,u11_bout,u11_sout);
+UnitCell u12(u6_out,B2,u11_bout,u13_sout,u12_out,u12_bout,u12_sout);
+UnitCell u13(u7_out,B3,u12_bout,u14_sout,u13_out,u13_bout,u13_sout);
+UnitCell u14(u8_out,0,u13_bout,~(u13_bout),u14_out,u14_bout,u14_sout);
+
+assign Q1 = ~u13_bout;
+
+UnitCell u15(A0,B0,1'b0,u16_sout,u15_out,u15_bout,u15_sout);
+UnitCell u16(u10_out,B1,u15_bout,u17_sout,u16_out,u16_bout,u16_sout);
+UnitCell u17(u11_out,B2,u16_bout,u18_sout,u17_out,u17_bout,u17_sout);
+UnitCell u18(u12_out,B3,u17_bout,u19_sout,u18_out,u18_bout,u18_sout);
+UnitCell u19(u13_out,0,u18_bout,~(u18_bout),u19_out,u19_bout,u19_sout);
+
+assign Q0 = ~u18_bout;
+assign Q6=1'b0;
+assign Q5=1'b0;
+assign Q4=1'b0;
+
+endmodule
